@@ -1,0 +1,18 @@
+{% extends "base_form.html" %}
+{% block title %}
+Log || Flask
+{% endblock %}
+{% block content %}
+    <h1>Formulario</h1>
+    <!-- Usando el url for decimos a donde lo queremos enviar, y poniendo el metodo de get hacemos que
+         se envie un diccionario y se espere una respuesta
+        
+        Esto se debe dirigir a la funcion de bienvenido donde se tratan estos
+        datos para ser comparados-->
+    <form action="{{url_for('bienvenido')}}" method="get">
+        <label for="">Ingresa tu Nombre: <input type="text" name="user" placeholder="Name User"></label><br>
+        <label for="">Ingresa tu Contraseña: <input type="password" name="pass" placeholder="Pass *****"></label><br>
+        <label for="">¿Te vas a registrar? <input type="checkbox" name="ans" value="false"></label><br>
+        <input type="submit" value="Ingresar">
+    </form>
+{% endblock %}

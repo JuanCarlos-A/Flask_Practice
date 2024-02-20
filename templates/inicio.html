@@ -1,0 +1,11 @@
+{% if estado %}
+    <p>Hola, Bienvenido {{nombre}}</p>
+{% else %}
+    <p>No estas en mi base de datos. Registrate</p>
+{% endif %}
+
+<form method="post">
+    {{formulario.hidden_tag()}}
+    {{formulario.nombre.label}} {{formulario.nombre()}}
+    {{formulario.estado}}
+</form>

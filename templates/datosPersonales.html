@@ -1,0 +1,18 @@
+{% extends "base_form.html" %}
+{% block title%}
+Formulario de Datos Personales
+{% endblock %}
+
+{% block content %}
+    <h1>Formulario de Datos Personales</h1>
+    <!-- Mostramos los datos enviados -->
+    <form method="post">
+        <!-- Esta linea de codigo ayuda a traer un metodo seguro de autenticeción para proteger a los frmularios -->
+        {{formulario.hidden_tag()}}
+        {{formulario.nombre.label}} {{formulario.nombre()}} 
+        {{formulario.edad.label}} {{formulario.edad()}} 
+        {{formulario.sexo.label}} {{formulario.sexo()}} 
+        {{formulario.comentarios.label}} {{formulario.comentarios()}} 
+        {{formulario.boton}}
+    </form>
+{% endblock %}

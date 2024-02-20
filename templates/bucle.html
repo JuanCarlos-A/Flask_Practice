@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucles</title>
+</head>
+<body>
+    <h2>Lista Personas</h2>
+    <ul>
+        <!-- Cuando usamos un bucle, es necesario usar los corchetes con el porcentaje y siempre cerrar el bucle -->
+        {% for p in personas%}
+        <!-- Se usan los bucles con codigo comun en Python  
+        Cuando se trata de traer variables, usamos doble juego de llaves,
+        pero cuando vamos a usar codigo usamos juego de llaves con doble
+        simbolo de porcentaje-->
+        <li>{{'Nombre: '+p}}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
