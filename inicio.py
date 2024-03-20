@@ -4,8 +4,8 @@ from flask import Flask, render_template, url_for, redirect, session
 # Estas importaciones tendran uqe ver con la creacion de formularios
 
 from flask_wtf import FlaskForm
-from wtforms import *
-from wtforms.validators import DataRequired
+from wtforms import StringField,BooleanField,TextAreaField,RadioField,SubmitField
+# from wtforms.validators import DataRequired
 
 # Esta importacion se hace con el objetivo de tener una variable de entorno 
 # como llave secreta
